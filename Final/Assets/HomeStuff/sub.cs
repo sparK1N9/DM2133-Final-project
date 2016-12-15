@@ -9,8 +9,7 @@ public class sub : MonoBehaviour
 {
     public string text;
     public AudioSource sfxSource;
-    public AudioSource sfxSource2;
-    public AudioClip winSound;
+    public AudioSource winSound;
     List<string> story = new List<string>();
     public int counter = 0;
     public static sub main;
@@ -52,6 +51,7 @@ public class sub : MonoBehaviour
         story.Add("");// wat
         story.Add("W T F ?\n╭∩╮（￣▽￣）╭∩╮");
         story.Add("");// XD
+        story.Add("");
         sfxSource.Play();
     }
 
@@ -66,6 +66,8 @@ public class sub : MonoBehaviour
         }
         else
         {
+            sfxSource.Stop();
+            if(!winSound.isPlaying) winSound.Play();
             illu.enabled = true;
             if (Input.GetKeyDown(KeyCode.D)) SceneManager.LoadScene(0);
         }

@@ -36,6 +36,7 @@ public class sub2 : MonoBehaviour {
         story.Add("Wat?");
         story.Add("");
         story.Add("XD");
+        story.Add("");
     }
 
     // Update is called once per frame
